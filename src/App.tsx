@@ -1,10 +1,10 @@
-import { useTranslation } from "react-i18next"
+import React from 'react';
+import { LayoutApp } from './Layout';
 
-export default function App() {
-  const {t} = useTranslation()
+export const App: React.FC = () => {
   return (
-    <h1 className="bg-slate-500">
-      {t('hola')}
-    </h1>
+    <LayoutApp>
+      <div></div>
+    </LayoutApp>
   )
 }
