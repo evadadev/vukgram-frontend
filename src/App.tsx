@@ -1,10 +1,8 @@
 import React from 'react';
-import { LayoutApp } from './Layout';
+import { RouterComponentes } from './core/router/router.component';
 
 export const App: React.FC = () => {
   return (
-    <LayoutApp>
-      <div></div>
-    </LayoutApp>
+    <RouterComponentes />
   )
 }
