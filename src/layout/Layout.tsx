@@ -1,6 +1,6 @@
 import React from "react";
-import { Header } from "../pops/Header";
-import { SideBar } from "../pops/SideBar";
+import { SideBarContainer } from "../components/SideBar.container";
+import { Header } from "../components/Header";
 
 
 interface Props {
@@ -11,14 +11,14 @@ export const LayoutApp: React.FC<Props> = (props) => {
     const { children } = props;
 
     return (
-        <div>
-            <section>
-                <SideBar />
-            </section>
-            <section>
+        <div className="flex flex-row h-screen w-screen bg-complementary">
+            <SideBarContainer />          
+            <div className="flex flex-col w-screen px-9">
                 <Header/>
-                <main>{children}</main>
-            </section>
+                <div className="flex flex-row w-full h-full">
+                    {children}
+                </div>
+            </div>
         </div>
     )
 }

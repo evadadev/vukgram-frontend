@@ -1,12 +1,12 @@
 import React from "react";
 import { LayoutApp } from "../layout/Layout";
-import { Header } from "../pops/Header";
+import { Home } from "../components/Home";
 
 export const HomeScene: React.FC = () => {
 
     return( 
-        <LayoutApp>
-            <Header />
-        </LayoutApp>
+        <LayoutApp >
+            <Home  />
+        </LayoutApp> 
     )
 }
