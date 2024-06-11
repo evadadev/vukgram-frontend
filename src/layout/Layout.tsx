@@ -11,10 +11,14 @@ export const LayoutApp: React.FC<Props> = (props) => {
     const { children } = props;
 
     return (
-        <div className="flex flex-row h-screen w-screen bg-amber-50">
+        <div className="flex flex-row h-screen w-screen bg-complementary">
             <SideBarContainer />          
-            <Header/>
-            <main>{children}</main>
+            <div className="flex flex-col w-screen px-9">
+                <Header/>
+                <div className="flex flex-row w-full h-full">
+                    {children}
+                </div>
+            </div>
         </div>
     )
 }
